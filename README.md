@@ -4,7 +4,7 @@ Code for the article: "Logit Distance Bounds Representational Similarity" by Bea
 
 
 ## Description
-Training models and calculating metrics the main.py. See the "Usage" section  below for details.
+Training models and calculating metrics can be done using main.py. See the "Usage" section  below for details.
 
 
 ## Installation guide
@@ -36,6 +36,11 @@ References:
 
 
 ## Usage
+
+This code can train teacher models on one of the three datasets and distill student models using one of three distillation objectives:  
+1. KL divergence to the teacher
+2. L1 based logit loss 
+3. L2 based logit loss. 
 
 Examples for training teacher and student models on the three datasets are in the \[dataset\]_teacher_example and \[dataset\]_student_example files. 
 The cifar100 files give a slurm job example. All possible arguments can be found in utils/args.py. 
