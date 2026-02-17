@@ -1,6 +1,9 @@
 # Logit Distance Bounds Representational Similarity
 Code for the article: "Logit Distance Bounds Representational Similarity" by Beatrix M. G. Nielsen, Emanuele Marconato, Luigi Gresele, Andrea Dittadi and Simon Buchholz.
 
+[![DOI](https://zenodo.org/badge/1066371626.svg)](https://doi.org/10.5281/zenodo.18667837)
+
+
 
 
 ## Description
