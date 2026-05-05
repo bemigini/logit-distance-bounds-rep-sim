@@ -5,7 +5,7 @@ save and load json
 """
 
 
-from typing import Callable
+from typing import Callable, Dict
 
 from enum import Enum
 
@@ -22,14 +22,14 @@ import numpy as np
 
 
 class CustomEncoder(JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.ndarray) or isinstance(obj, torch.Tensor):
-            return obj.tolist()
-        if isinstance(obj, Enum):
-            return obj.name
-        if obj is None or isinstance(obj, Callable):
+    def default(self, o):
+        if isinstance(o, np.ndarray) or isinstance(o, torch.Tensor):
+            return o.tolist()
+        if isinstance(o, Enum):
+            return o.name
+        if o is None or isinstance(o, Callable):
             return ''    
-        return obj.__dict__
+        return o.__dict__
 
 
 def save_as_json(obj: object, save_to: str) -> None:
@@ -40,7 +40,7 @@ def save_as_json(obj: object, save_to: str) -> None:
         f.write(json_str)
 
 
-def load_json(load_from: str) -> str:
+def load_json(load_from: str) -> Dict:
     
     with open(load_from, 'r') as f:
         json_obj = json.load(f)
