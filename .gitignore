@@ -4,3 +4,5 @@ __pycache__
 /logs
 datasets/__pycache__
 
+.vscode
+
