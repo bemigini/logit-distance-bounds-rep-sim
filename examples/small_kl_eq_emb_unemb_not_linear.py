@@ -27,7 +27,7 @@ from examples.util import likelihood
 rng = np.random.default_rng(0)
 num_labels = 8
 
-# Get angles for first four labels 
+# Get angles for first four unembeddings 
 first_four_angles = np.expand_dims(np.array([0, np.pi/16, 2*np.pi/16, 3*np.pi/16]), 1)
 
 first_four_vectors = model_construction.get_2dvectors_from_rad_and_length(first_four_angles, 5.5)
@@ -53,7 +53,7 @@ plt.show()
 
 
 
-# Model two has y_5, y_6 swapped and y_7, y_8 swapped.
+# Model two has g(y_5), g(y_6) swapped and g(y_7), g(y_8) swapped.
 m2_g_vectors = m1_g_vectors.copy()
 m2_g_vectors[4] = m1_g_vectors[5]
 m2_g_vectors[5] = m1_g_vectors[4]
