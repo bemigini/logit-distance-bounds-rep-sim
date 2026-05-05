@@ -114,6 +114,12 @@ ax.set_title('model 2', fontsize = 20)
 ax.legend()
 fig.show()
 
+# So now embeddings of model 1 are a rotation of embeddings of model 2
+# and unembeddings of model 1 are also a rotation of unembeddings of model 2,
+# but the distributions of these models will be very different.
+# For example, the embeddings which model 1 will assign label 1, will be 
+# assigned label 2 by model 2. 
+
 
 
 # Calculating mean canonical correlation 
