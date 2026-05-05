@@ -8,6 +8,7 @@ Code for the article: ["Logit Distance Bounds Representational Similarity"](http
 
 ## Description
 Training models and calculating metrics can be done using main.py. See the "Usage" section  below for details.
+Code for the plots for the examples in appendices G and H are in the "examples" folder.
 
 
 ## Installation guide
@@ -47,6 +48,9 @@ This code can train teacher models on one of the three datasets and distill stud
 
 Examples for training teacher and student models on the three datasets are in the \[dataset\]_teacher_example and \[dataset\]_student_example files. 
 The cifar100 files give a slurm job example. All possible arguments can be found in utils/args.py. 
+
+
+
 
 
 
